@@ -1,0 +1,11 @@
+新的虚拟机中的linux-vim等相关功能配置：
+1.拷贝 vimrc_nieting 到顶层目录下，改名为 .vimrc
+2.创建 bin/ 目录；拷贝 function.sh 到 bin/ 目录下；
+3.修改 ./.bashrc,添加 ：
+	# source my own shell script
+	if [ -f ~/bin/function.sh ]; then
+	    . ~/bin/function.sh
+	fi
+4.创建 .ssh/ 目录；拷贝 nieting，nieting.pub，config 文件到 .ssh/ 下；（为了下载git-server中的代码，可能需要使用 chmod 修改权限)
+5.创建 .vim/ 目录；拷贝 taglist_46.zip 到 .vim/ 下；使用cli ： unzip taglist_46.zip 解压缩
+6.拷贝 autoload_cscope.vim 到 .vim/plugin/ 下；(为了自动加载 cscope.out 文件)
